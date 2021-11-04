@@ -1,40 +1,27 @@
-/*const MATH_PI = 3.14;
-const radius = 10;
-
-let result;
-
-result = radius !== 0 
-? MATH_PI * (radius * radius)
-: "Radius can not be equal to zero";
-
-//console.log(result);
-
-const userName = "Mark";
-
-const discount = userName === "Tony"
-? '30%'
-:'0%';
-
-//console.log("Congrats! Your discount is " + discount);
-
-const res = radius !== 0 && MATH_PI === 3.14
-? MATH_PI * (radius * radius)
-: "Radius can not be equal to zero and MATH_PI should be correct";
-const checkRadius = radius === 10 || radius <100 ? 'Ok' : 'Not Ok';
-console.log(checkRadius);
-*/
-
+//increase value
 const a = 15;
 const b = 20;
 const sum = a + b;
-
 console.log (a + b);
-
+//shorter way
+let c = a;
+c += b;
+console.log(c);
+//another example
 const constA = 15;
 const constB = 5;
 const result = constA * constB * constB;
-
+console.log(result);
 //shorter way
-let result1 = 5 * 5;
-result1 *= constB;
+let result1 = constB * constB;
+result1 *= constA;
 console.log(result1); 
+//decrease value
+let d = 12;
+let e = 7;
+d = d - e;
+console.log(d);
+//shorter way
+let newLetter = 12;
+newLetter -= e;
+console.log(newLetter);
