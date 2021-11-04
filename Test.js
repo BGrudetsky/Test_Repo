@@ -108,3 +108,27 @@ const secondValueSpeed =  tInHours > 0 || distInKm > 1
 console.log(`Your speed is ${secondValueSpeed} km/hr`);
 
 //Conditional operators
+const secondA = 8;
+const secondB = 16;
+const secondC = 82;
+
+//example with if...
+if (secondA > 7) {
+    console.log("Second A is more than 7");
+}
+
+//example with if...else
+if (secondB >= 18) {
+    console.log("Congrats! You can get a driver's license");
+} else {
+    console.log("Ooops. Need to be older");
+}
+
+//example with else...if
+if (secondC >= 75) {
+    console.log("Sorry. You are too old for that");
+} else if (secondC >= 18) {
+    console.log("Congrats! You can get a driver's license");
+} else {
+    console.log("Ooops. Need to be older");
+}
