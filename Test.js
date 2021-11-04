@@ -126,9 +126,36 @@ if (secondB >= 18) {
 
 //example with else...if
 if (secondC >= 75) {
-    console.log("Sorry. You are too old for that");
+    console.log("Sorry, you are too old for that");
 } else if (secondC >= 18) {
     console.log("Congrats! You can get a driver's license");
 } else {
-    console.log("Ooops. Need to be older");
+    console.log("Ooops. You need to be older");
 }
+
+//example with switch... case
+
+const year = "2021";   //why we use "string" type? Can we use "Number" type?
+switch (year) {
+    case "2020": {
+        console.log("This is the previous year");
+    }
+    break;
+
+    case "2021": {
+        console.log("This is the current year");
+    }
+    break;
+    
+    case "2022": {
+        console.log("This will be the next year");
+    }
+    break;
+
+    default: {
+        console.log("Sorry, I dont remember this year");
+    }
+}
+//-------------------------------------------------------------------
+//Third presentation
+//-------------------------------------------------------------------
