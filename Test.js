@@ -24,12 +24,12 @@ console.log(isFalse);
 //check data types
 let nextA;
 let nextB = [1, 8];
-console.log(typeof (text));
-console.log(typeof (PI));
-console.log(typeof (first_func));
-console.log(typeof (isFalse));
-console.log(typeof (nextA));
-console.log(typeof (nextB));
+console.log(typeof (text));        //return string
+console.log(typeof (PI));          //return number
+console.log(typeof (first_func));  //return function
+console.log(typeof (isFalse));     //return boolean
+console.log(typeof (nextA));       //return undefined
+console.log(typeof (nextB));       //return object
 
 //comparison 
 const leftApper = 10;
@@ -87,7 +87,24 @@ console.log(radius!== 15);  //must be false
 //ternary
 const valueDistanceInKm = 200;
 const valueTimeInHours = 4;
-const valueSpeed =  valueTimeInHours !== 0
+const valueSpeed =  valueTimeInHours !== 0   //one of logical operators
        ? valueDistanceInKm / valueTimeInHours
        : "Wrong estimate of time"
-    console.log(`Your speed is ${valueSpeed} km/hr`);
+console.log(`Your speed is ${valueSpeed} km/hr`);
+
+//logical operators
+const distanceInKm = 100;
+const timeInHours = 4;
+const nextValueSpeed =  timeInHours !== 0 && distanceInKm >= 1
+       ? distanceInKm / timeInHours
+       : "Wrong value of time or distance"
+console.log(`Your speed is ${nextValueSpeed} km/hr`);
+
+const distInKm = 130;
+const tInHours = 2;
+const secondValueSpeed =  tInHours > 0 || distInKm > 1
+     ? distInKm / tInHours
+     : "Wrong value of time or distance"
+console.log(`Your speed is ${secondValueSpeed} km/hr`);
+
+//Conditional operators
