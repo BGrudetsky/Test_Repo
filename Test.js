@@ -11,6 +11,7 @@ console.log(summ);
 let decrease = summ - $third;
 console.log(decrease);
 
+const first_func = function () { console.log("Hello Bohdan!") };
 
 
 
