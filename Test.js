@@ -19,12 +19,24 @@ console.log(isFalse);
 
 //check data types
 let nextA;
-let nextB = [];
+let nextB = [1, 8];
 console.log(typeof (text));
 console.log(typeof (PI));
+console.log(typeof (first_func));
 console.log(typeof (isFalse));
 console.log(typeof (nextA));
 console.log(typeof (nextB));
+
+//comparison 
+const leftApper = 10;
+const rightApper = "10"; //another data type
+const secondRightApper = 30;
+console.log(leftApper == rightApper); //must be true
+console.log(leftApper == secondRightApper); //must be false
+console.log(leftApper === rightApper); //must be false
+console.log(leftApper === secondRightApper); //must be false
+
+
 
 //increase value
 const a = 15; //types of variables
