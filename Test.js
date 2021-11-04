@@ -35,9 +35,9 @@ console.log(typeof (nextB));
 const leftApper = 10;
 const rightApper = "10"; //another data type
 const secondRightApper = 30;
-console.log(leftApper == rightApper); //must be true
-console.log(leftApper == secondRightApper); //must be false
-console.log(leftApper === rightApper); //must be false
+console.log(leftApper == rightApper);        //must be true
+console.log(leftApper == secondRightApper);  //must be false
+console.log(leftApper === rightApper);       //must be false
 console.log(leftApper === secondRightApper); //must be false
 
 //-------------------------------------------------------------------
@@ -76,3 +76,18 @@ console.log(d);
 let newLetter = 12;
 newLetter -= e;
 console.log(newLetter);
+
+//comparison
+const radius = 15;
+console.log(radius>20);     //must be false
+console.log(radius>=20);    //must be false
+console.log(radius<20);     //must be true
+console.log(radius!== 15);  //must be false 
+
+//ternary
+const valueDistanceInKm = 200;
+const valueTimeInHours = 4;
+const valueSpeed =  valueTimeInHours !== 0
+       ? valueDistanceInKm / valueTimeInHours
+       : "Wrong estimate of time"
+    console.log(`Your speed is ${valueSpeed} km/hr`);
