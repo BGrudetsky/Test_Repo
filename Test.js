@@ -135,19 +135,19 @@ if (secondC >= 75) {
 
 //example with switch... case
 
-const year = "2021";   //why we use "string" type? Can we use "Number" type?
+const year = 2021;
 switch (year) {
-    case "2020": {
+    case 2020: {
         console.log("This is the previous year");
     }
     break;
 
-    case "2021": {
+    case 2021: {
         console.log("This is the current year");
     }
     break;
     
-    case "2022": {
+    case 2022: {
         console.log("This will be the next year");
     }
     break;
