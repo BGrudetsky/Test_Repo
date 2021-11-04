@@ -1,3 +1,7 @@
+//------------------------------------------------------------
+//First Presentation
+//------------------------------------------------------------
+
 //types of variables
 const second = 2;
 const SECOND = 2;
@@ -36,7 +40,9 @@ console.log(leftApper == secondRightApper); //must be false
 console.log(leftApper === rightApper); //must be false
 console.log(leftApper === secondRightApper); //must be false
 
-
+//-------------------------------------------------------------------
+//Second presentation
+//-------------------------------------------------------------------
 
 //increase value
 const a = 15; //types of variables
