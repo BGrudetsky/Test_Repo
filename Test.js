@@ -1,22 +1,30 @@
 //types of variables
-let second = 2;
-let SECOND = 2;
+const second = 2;
+const SECOND = 2;
 
-let $third = 2;
+const $third = 2;
 let text = "string text";
 
-let PI = 3.14;
+const PI = 3.14;
 let summ = second + SECOND + $third;
 console.log(summ);
 let decrease = summ - $third;
 console.log(decrease);
 
 const first_func = function () { console.log("Hello Bohdan!") };
+first_func();
 
+const isFalse = false;
+console.log(isFalse);
 
-
-
-
+//check data types
+let nextA;
+let nextB = [];
+console.log(typeof (text));
+console.log(typeof (PI));
+console.log(typeof (isFalse));
+console.log(typeof (nextA));
+console.log(typeof (nextB));
 
 //increase value
 const a = 15; //types of variables
