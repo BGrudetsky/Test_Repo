@@ -159,3 +159,31 @@ switch (year) {
 //-------------------------------------------------------------------
 //Third presentation
 //-------------------------------------------------------------------
+//first object creation
+const cat = {                        //create with options
+    name: 'Tomas',
+    ageInYears: 13,
+    color: 'silver',
+    speak: () => console.log('Meaw')
+}
+cat.speak ()
+console.log('The cat name is', cat.name);
+console.log('The cat color is', cat.color);
+
+if (cat.ageInYears >= 13) {
+    console.log('This is a very old cat');
+}
+
+//create and modify object
+const carSedan = {};     //create empty object
+carSedan.doors = 5;      //add new option for object
+console.log('Sedan car has', carSedan.doors, 'doors');
+carSedan.signal = () => console.log('Tu-lu-la');
+carSedan.signal ();
+
+
+
+
+
+
+
