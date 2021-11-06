@@ -58,8 +58,8 @@ const newStudent = {
 newStudent.sayHello();
 
 const nextNewStudent = Object.create(newStudent);        //create new object from prototype
-nextNewStudent.name = 'Bob';                           //extend property for nextNewStudent
-nextNewStudent.age = 21;                               //extend property for nextNewStudent
+nextNewStudent.name = 'Bob';                             //extend property for nextNewStudent
+nextNewStudent.age = 21;                                 //extend property for nextNewStudent
 console.log(nextNewStudent);                             //check changed properties
 nextNewStudent.sayHello();                               //check new result
 
@@ -68,9 +68,9 @@ const firstDayResults = {unitsOfItemA:6, unitsOfItemB:8, unitsOfItemC:10, unitsO
 const secondDayResults = {unitsOfItemA:4, unitsOfItemB:6, unitsOfItemC:7, unitsOfItemD:9};
 const thirdDayResults = {unitsOfItemA:5, unitsOfItemB:12, unitsOfItemE:45};
 
-const lastActualDayResults = Object.assign({}, secondDayResults, thirdDayResults);
+const lastActualResults = Object.assign({}, secondDayResults, thirdDayResults);
 console.log(firstDayResults);    //check if not rewritten
-console.log(lastActualDayResults); 
+console.log(lastActualResults); 
 
 //Example 6
 const girl = {
@@ -94,3 +94,16 @@ const cargo = {
 console.log('The cargo has the following dimensions:',Object.keys(cargo));
 
 //Example 8
+const weather = {
+    temp: 5,
+    rain: false
+}
+if(weather.temp <=0) {
+    console.log('Temperature is', weather.temp, 'Please, wear a coat');
+} else if (weather.rain == true) {
+    console.log("It's rainy today. Please, dont remember the umbrella.")
+}else{
+console.log('Nothing to worry. Weather is the same as yesterday.')
+}
+
+//Example 9
