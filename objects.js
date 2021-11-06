@@ -107,3 +107,39 @@ console.log('Nothing to worry. Weather is the same as yesterday.')
 }
 
 //Example 9
+const softDev = {
+    numberOfDevs: 4,
+    stageOfDeveloping: "Operationalization and Maintenance"
+}
+switch (softDev.stageOfDeveloping) {
+    case "Requirements Gathering": {
+        console.log("It's very very slow.");
+    }
+    break;
+    case "Software Design": {
+        console.log("It's very slow.");
+    }
+    break;
+    case "Software Development": {
+        console.log("It's slow.")
+    }
+    break;
+    case "Test and Integration":{
+        console.log("You need to work a little bit more.");
+    }
+    break;
+    case "Deployment": {
+         console.log("You are exact in time.")
+    }
+    break;
+    case "Operationalization and Maintenance": {
+        console.log("Wow! You are faster than lightning.")
+    }
+    break;
+    default: {
+        console.log ("Do you really think you know about the stages of development?");
+    }
+}
+
+//Example 10 - finally the last one
+
