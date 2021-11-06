@@ -142,4 +142,10 @@ switch (softDev.stageOfDeveloping) {
 }
 
 //Example 10 - finally the last one
-
+const water = {
+    temperature: -5,
+    purity: 'clear'
+}
+const physicalState = water.temperature < 0
+? console.log("It's ice")
+: console.log("It's water");
