@@ -194,7 +194,7 @@ console.log(pet.hasOwnProperty('color'));  //check if object has property - fals
 console.log(pet.toString());               //return string representation of an object
 
 //static methods
-//example object.Assign()
+//example Object.assign()
 const firstHouseFlats = {a:6, b:8, c:10, d:1, h:55};
 const secondHouseFlats = {a:4, b:6, c:7, d:9, z:45};
 const thirdHouseFlats = {b:5, d:12, e:45};
@@ -203,4 +203,21 @@ const fourthHouseFlats = Object.assign(firstHouseFlats, secondHouseFlats, thirdH
 console.log(firstHouseFlats);    //return { a: 4, b: 5, c: 7, d: 12, h: 55, z: 45, e: 45 }
 console.log(fourthHouseFlats);   //return { a: 4, b: 5, c: 7, d: 12, h: 55, z: 45, e: 45 }
 
+//example Object.create()
+const firstPersonLook = {
+    name: 'Jenni',
+    headdress: 'cap',
+    dressLenght: 'short',
+    dressColor: 'red',
+    shoes: 'sneakers',
+    sayAbout: function() {
+        console.log(`Hi. My name is ${this.name}. My look is ${this.headdress}, ${this.dressColor} ${this.dressLenght} dress and ${this.shoes}.`);
+    }
+};
+firstPersonLook.sayAbout();
 
+const secondPersonLook = Object.create(firstPersonLook);   //create new object from prototype
+secondPersonLook.name = 'Nicole';                          //change property
+secondPersonLook.dressColor = 'blue';                      //change property
+console.log(secondPersonLook.valueOf());                   //check changed property
+secondPersonLook.sayAbout();                               //check new result
