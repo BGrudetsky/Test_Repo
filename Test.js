@@ -199,8 +199,8 @@ const firstHouseFlats = {a:6, b:8, c:10, d:1, h:55};
 const secondHouseFlats = {a:4, b:6, c:7, d:9, z:45};
 const thirdHouseFlats = {b:5, d:12, e:45};
 
-const fourthHouseFlats = Object.assign(firstHouseFlats, secondHouseFlats, thirdHouseFlats);
-console.log(firstHouseFlats);    //return { a: 4, b: 5, c: 7, d: 12, h: 55, z: 45, e: 45 }
+const fourthHouseFlats = Object.assign({}, secondHouseFlats, thirdHouseFlats);
+console.log(firstHouseFlats);    //check if not rewritten - return { a: 6, b: 8, c: 10, d: 1, h: 55 }
 console.log(fourthHouseFlats);   //return { a: 4, b: 5, c: 7, d: 12, h: 55, z: 45, e: 45 }
 
 //example Object.create()
@@ -219,5 +219,8 @@ firstPersonLook.sayAbout();
 const secondPersonLook = Object.create(firstPersonLook);   //create new object from prototype
 secondPersonLook.name = 'Nicole';                          //change property
 secondPersonLook.dressColor = 'blue';                      //change property
-console.log(secondPersonLook.valueOf());                   //check changed property
+console.log(secondPersonLook);                             //check changed properties
 secondPersonLook.sayAbout();                               //check new result
+
+//example Object.entries()
+//will done after theme about cycles
