@@ -217,10 +217,31 @@ const firstPersonLook = {
 firstPersonLook.sayAbout();
 
 const secondPersonLook = Object.create(firstPersonLook);   //create new object from prototype
-secondPersonLook.name = 'Nicole';                          //change property
-secondPersonLook.dressColor = 'blue';                      //change property
+secondPersonLook.name = 'Nicole';                          //extend property for secondPersonLook
+secondPersonLook.dressColor = 'blue';                      //extend property for secondPersonLook
 console.log(secondPersonLook);                             //check changed properties
 secondPersonLook.sayAbout();                               //check new result
 
 //example Object.entries()
 //will done after theme about cycles
+
+//example Object.freeze()
+const person = {
+    dateOfBirth: 1990,
+    hairColor: 'black',
+}
+Object.freeze(person);
+person.dateOfBirth = 1980;   //change property of object
+console.log(person);
+
+//example Object.keys()
+const someObject = {
+    paramA: 'Standart',
+    paramB: 'Normal',
+    paramC: 'Excellent',
+}
+console.log(Object.keys(someObject));
+
+//-------------------------------------------------------------------
+//Fourth presentation
+//-------------------------------------------------------------------
