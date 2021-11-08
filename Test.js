@@ -157,7 +157,7 @@ switch (year) {
     }
 }
 //-------------------------------------------------------------------
-//Third presentation
+//Third presentation (Objects)
 //-------------------------------------------------------------------
 //first object creation
 const cat = {                        //create with options
@@ -243,5 +243,97 @@ const someObject = {
 console.log(Object.keys(someObject));
 
 //-------------------------------------------------------------------
-//Fourth presentation
+//Fourth presentation (Functions)
 //-------------------------------------------------------------------
+//arrow function example
+const firstFunc = () => {
+    console.log('3 weeks JS Crash Course');
+}
+firstFunc()
+
+//shorter way
+const secondFunc = () => console.log('Second week of JS Crash Course');
+secondFunc()
+
+//function declaration example
+function someFunc(items, cost) {
+      itemsCost = items * cost;
+      console.log ('All items cost is $', itemsCost)   
+}
+someFunc(10, 45)
+
+//function expression example
+const speed = function (distance, time) {
+    carSpeed = distance * time;
+    console.log('The car speed is', carSpeed,'km/hr');
+}
+speed(10, 15)
+//anonymous function example
+function newFunction(startFunc) {
+    startFunc();
+  }
+   
+  newFunction(function() {
+    console.log("It is working function");
+  });
+
+//Immediately invoked function expression example
+  (function coolFunction (paramA, paramB) {
+      sumParam = paramA + paramB
+      console.log('The summary of param is', sumParam); 
+  })(10, 5);
+
+//uses with objects
+const flat = {
+    rooms: 4,
+    bedrooms: 3
+};
+
+function homeComment(firstFlatParam, secondFlatParam) {
+  console.log('It is a', firstFlatParam, 'rooms flat');
+  if (secondFlatParam === 4) {
+    console.log("And with 4 bedrooms");
+} else {
+    console.log('And with',flat.bedrooms,'bedrooms');
+  }
+}
+homeComment(flat.rooms, flat.bedrooms);
+
+//function in function
+const building = {
+    oneRoomsFlats: 17,
+    twoRoomsFlats: 9
+};
+
+function countFlats(buildingFlats) {
+    console.log(buildingFlats);
+}
+function flatsInBuilding(flatsWithOneRoom, flatsWithTwoRooms) {
+    const summar = flatsWithOneRoom + flatsWithTwoRooms;
+    countFlats(`It is a ${summar} flats building`);
+}
+flatsInBuilding(building.oneRoomsFlats, building.twoRoomsFlats);
+
+//functions like arguments
+const fingers = {
+    leftHandFingers: 17,
+    rightHandFingers: 9
+};
+
+function fingersSummary(fingersFromLeftH, fingersFromRightH, consoleFunc) {
+    const fingSum = fingersFromLeftH + fingersFromRightH;
+    consoleFunc(`You have ${fingSum} fingers`);
+   
+    if (fingSum < 10) {
+        consoleFunc('Where you lost some fingers?');
+    } else if (fingSum == 10) {
+      consoleFunc('That is normal');
+    } else {
+        consoleFunc('Are you a muthant?');
+    }
+  }
+   
+  function consoleFunc(str) {
+    console.log(str);
+  }
+  fingersSummary(fingers.leftHandFingers, fingers.rightHandFingers, consoleFunc)
