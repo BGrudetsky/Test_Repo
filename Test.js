@@ -232,7 +232,7 @@ const person = {
 }
 Object.freeze(person);
 person.dateOfBirth = 1980;   //change property of object
-console.log(person);
+
 
 //example Object.keys()
 const someObject = {
@@ -240,7 +240,6 @@ const someObject = {
     paramB: 'Normal',
     paramC: 'Excellent',
 }
-console.log(Object.keys(someObject));
 
 //-------------------------------------------------------------------
 //Fourth presentation (Functions)
@@ -337,3 +336,81 @@ function fingersSummary(fingersFromLeftH, fingersFromRightH, consoleFunc) {
     console.log(str);
   }
   fingersSummary(fingers.leftHandFingers, fingers.rightHandFingers, consoleFunc)
+
+//-------------------------------------------------------------------
+//Fifth presentation (Arrays)
+//-------------------------------------------------------------------
+// empty array example
+let firstArray = [];
+
+// array with nums example
+const secondArray = [100, 1000, 10000, 100000];
+
+// array with strings example
+const thirdArray = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+// different data types example
+const anyArray = [50, 'string', { n: 5 }, [10,100,1000]];
+
+//access to elements from array
+const arrayWithElements = [12, 'cat', true, {firstKey: 'string'}];
+console.log(arrayWithElements[1]);
+console.log(arrayWithElements[2]);
+console.log(arrayWithElements[3].firstKey);
+
+//modification of arrays
+const nextArray = [55, 66, 77, 88, 99];
+nextArray[2] = 111;
+console.log(nextArray);
+delete nextArray [0];  //delete info in 0 element
+console.log(nextArray);
+nextArray.shift();     //delete element
+
+
+//method .push() example
+const pushExampleArray = [55, 66, '77', true, false];
+pushExampleArray.push('Done');
+pushExampleArray.push(88);
+pushExampleArray.push({name:'Bohdan', age: 100});
+
+
+//method .pop() example
+const popExampleArray = [100, 99, 98, 97];
+popExampleArray.pop();
+popExampleArray.pop();
+
+
+//method .unshift() example
+const unsftExmplArray = [45, 46, 47, 48];
+unsftExmplArray.unshift(43, 44);
+unsftExmplArray.unshift(41, '42');
+unsftExmplArray.unshift(40);
+
+
+//method .shift() example
+const sftExampleArr = [15, 25, 35, 45, 55];
+sftExampleArr.shift();    //delete first element
+sftExampleArr.shift();    //delete new "first element" but "previous second"
+
+//method .concat() example
+const firstOperArray = [19, 20];
+const secondOperArray = [21, 22, 23];
+const concatResult = firstOperArray.concat(secondOperArray);
+
+//get and use info 
+const versions = [
+    {version: 1},
+    {version: 2},
+    {version: 3}
+]
+function someVersion(myVersion) {
+    return 'You have ' + myVersion + ' version of game';
+}
+someVersion(versions[1].version)
+
+//create new info
+const emptyArray = [];
+function infoAdder (array, info) {
+    array.push(info);
+}
+infoAdder(emptyArray, 45);
