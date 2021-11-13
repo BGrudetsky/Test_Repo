@@ -414,3 +414,103 @@ function infoAdder (array, info) {
     array.push(info);
 }
 infoAdder(emptyArray, 45);
+
+//spread operator and default value example
+function spreadFunc(firstObj, secondObj, defaultObj = {}) {  //use default element
+    return {
+      ...firstObj,
+      ...secondObj,
+      ...defaultObj,
+    };
+  } 
+  const summaryObj = spreadFunc(
+    { firstEl: 'first value'},
+    { secondEl: 'second value'}     //third element is default
+  );
+
+//destructuring of the object
+const dog = {
+    name: 'Barsik',
+    ageInYears: 13,
+    color: 'silver'
+  }
+const { name, color } = dog;
+
+//destructuring of the array	
+const years = ['25 Years', '27 Years', '30 Years', '33 Years', '35 Years']
+const [ younger,,, young, older] = years;   // unnamed two items inside array
+
+//destructuring of the array for changing elements
+function swap(arrOn, xi, xj) {
+    [arrOn[xi], arrOn[xj]] = [arrOn[xj], arrOn[xi]];   // replace of array elements
+  }
+  const theatrePlacesNums = [51, 53, 52, 55, 54];
+  swap(theatrePlacesNums, 1, 2);
+  swap(theatrePlacesNums, 3, 4);
+
+//-------------------------------------------------------------------
+//Sixth presentation (Loops)
+//-------------------------------------------------------------------
+//loop 'for...' example
+let sumUsingLoop = 0;
+for (let i = 0; i <= 100; i++) {
+  sumUsingLoop += i;
+}
+
+//loop 'for...' for work with arrays (example)
+const numbs = [18, 19, 20, 31, 50.5, 60];   //use number with point
+let sumOfNumbs = 0;
+for (let i = 0; i < numbs.length; i++) {
+  sumOfNumbs += numbs[i];
+}
+
+//loop 'for...' for work with arrays (example)
+let string2 = '';
+const startArr = ['My', 'true', 'name', 'is', 'John,','and', 'I', 'am', 23];
+  for (let h = 0; h < startArr.length; h++) {
+    string2 += startArr[h] + ' ';
+  }
+
+//loop 'for...' for work with arrays (reverse)(example)
+let reversStr = '';
+const normalArr = [23, 'am', 'I', 'and','John,', 'is', 'name', 'true', 'My'];
+  for (let g = normalArr.length - 1; g >= 0; g--) {
+    reversStr += normalArr[g] + ' ';
+  }
+
+//loop 'for... in' example
+const obj10 = {
+    first: 10,
+    second: 11,
+    third: 21
+  };
+  let smStr = '';
+  for (let key in obj10) {
+    smStr += key + ", ";
+  }
+
+//loop 'while' for work with arrays (example)
+const numer = [1, 2, 3, 4, 5, 6];
+let sumNumer = 0;
+let ab = 0;
+while (ab < numer.length) {
+  sumNumer += numer[ab];
+  ab++;
+}
+
+//loop 'while' for work with arrays (example)
+const names1 = ['Tony', 'Johnie', 'Messi', 'Fessi', 'Pessi'];
+let sumSenten = '';
+let ac = 0;
+while (ac < names1.length) {
+  sumSenten += names1[ac] + ' ';
+  ac++;
+}
+
+//loop 'do... while' example 
+let ar = 9;
+let fct = 1;
+do {
+  fct *= ar;
+  ar--;
+} while (ar >= 1)
