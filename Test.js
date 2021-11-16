@@ -514,3 +514,138 @@ do {
   fct *= ar;
   ar--;
 } while (ar >= 1)
+
+//-------------------------------------------------------------------
+//Seventh presentation (Methods for working with arrays)
+//-------------------------------------------------------------------
+// method .sort() example
+const unSort = [25, 15, 20, 19];
+unSort.sort(
+  (curr, next) => {
+    if(curr < next) {
+      return -1;
+    }
+  }
+  );
+
+//method .forEach() example
+const numberz = [1, 2, 3, 4, 5, 6];
+let sumz = 0;
+numberz.forEach(num => {
+  sumz += num
+})
+
+//method .map() fith anonymous fn example
+const numz = [1, 2, 3, 4, 5, 6];
+const increasedNumz = numz.map(function (num) {
+  return num + 5;
+})
+
+//method .map() with arrow fn example
+const numsZ = [1, 2, 3, 4, 5, 6];
+const incrNumsZ = numsZ.map(num => num + 5);
+
+//method .map() with declarated fn example
+const numsie = [0, 1, 0, 3, 6, 5, 6];
+const incrNum = numsz => {
+  if (numsz <= 0) {
+    return 10;
+  }
+  return numsz + 10;
+}
+const newNumsie = numsie.map(incrNum);
+
+//method .filter() example
+const nuMs = [5, 1, 3, 2, 6, 6, 5];
+const filNuMs = nuMs.filter(function(num) {
+  return num !== 5;
+});
+
+//method .filter with array fn example
+const numbes = [1, 5, 73, 88, 35, 61];
+const filteredNums = numbes.filter((elem) => elem !== 88);
+
+//method .filter for work with objects example
+const balls = [
+  { color: 'red', printedNumber: 45 },
+  { color: 'yellow', printedNumber: 14 },
+  { color: 'black', printedNumber: 15 },
+  { color: 'blue', printedNumber: 25 },
+  { color: 'pink', printedNumber: 11 },
+  { color: 'brown', printedNumber: 8 }
+];
+const printedNumberRes = balls.filter((balls) => balls.printedNumber > 11);
+
+//method .reduce() for work with arrays example
+const arrNumsie = [150, 20, 13, 4, 3, 6];
+const dec = arrNumsie.reduce(
+  (acc, current) => acc -= current,
+  500
+);
+
+//method .reduce() for filter changes in array example
+const anotherBalls = [
+  { color: 'red', printedNumber: 45 },
+  { color: 'black', printedNumber: 14 },
+  { color: 'blue', printedNumber: 15 },
+  { color: 'orange', printedNumber: 25 },
+  { color: 'pink', printedNumber: 11 },
+  { color: 'green', printedNumber: 8 }
+];
+const filteredBalls = anotherBalls.reduce((acc, element) => {
+  if (element.printedNumber > 14) {
+    acc.push({
+      color: element.color,
+      printedNumber: element.printedNumber,
+      result: (element.color + ' ') + (element.printedNumber),
+    })
+  }
+  return acc;
+}, []);
+
+//method .reduce() for filter and changes in array + spread operator	
+const sameBalls = [
+  { color: 'red', printedNumber: 45 },
+  { color: 'black', printedNumber: 14 },
+  { color: 'blue', printedNumber: 15 },
+  { color: 'orange', printedNumber: 25 },
+  { color: 'pink', printedNumber: 11 },
+  { color: 'green', printedNumber: 8 }
+];
+const filtSameBalls = sameBalls.reduce((acc, item) => {
+  if (item.printedNumber > 11) {
+    acc.push({
+      ...item,
+      fullName: (item.color + ' ') + item.printedNumber,
+    })
+  }
+  return acc;
+}, []);
+
+//method .sort() example
+const nums1 = [4, 9, 7, 0, 15, 3.5];
+const sumN = nums1.sort(
+  (a, b) => a - b
+);
+
+//method .join() example
+const phraseArray = ['This', 'is', 'just', 'a', 'beginning'];
+const stringPhrase = phraseArray.join(' ');
+
+//method .includes() example
+const inclExampleArray = [100, 200, 300];
+console.log(inclExampleArray.includes(100));
+
+//method .indexOf() example
+const brands = ['lenovo', 'dell', 'msi', 'asus', 'hp'];
+ console.log(brands.indexOf('hp'));
+
+ //method .slice() example
+const tickets = [5, 7, 10, 4, 8, 6, 2];
+const slicedTickets = tickets.slice(0, 5);
+console.log(slicedTickets);
+
+//method .splice() example
+const alphabet = ['B', 'C', 'D', 'E', 'F', 'G'];
+alphabet.splice(0, 0, 'A');
+console.log(alphabet);
