@@ -649,3 +649,74 @@ console.log(slicedTickets);
 const alphabet = ['B', 'C', 'D', 'E', 'F', 'G'];
 alphabet.splice(0, 0, 'A');
 console.log(alphabet);
+
+//-------------------------------------------------------------------
+//Eight presentation (Methods for working with strings)
+//-------------------------------------------------------------------
+//concatination of strings
+const employee = {
+  firstName: 'John',
+  lastName: 'Connor',
+};
+const welcomeStr = 'Welcome, ' + employee.firstName + ' ' + employee.lastName + '!';
+
+//concatination with another type of data
+const nextEmployee = {
+  firstName: 'Bohdan',
+  lastName: 'Connor',
+  tasks: 3,
+};
+const info = 'Employee ' + nextEmployee.firstName
+	+ ' ' + nextEmployee.lastName + ' has ' + 
+    + nextEmployee.tasks + ' tasks';
+
+//concatination with Number type of data
+const example = 10 + ' years old';
+
+//template literals (template strings)
+const yearsNumb = 25;
+const type = 'student'
+const rslt = `${yearsNumb} old ${type}`;
+
+//template literals (template strings) with ternary operator
+const yearsNumb1 = 25;
+const type1 = 'student'
+const rslt1 = `${yearsNumb1 > 20 ? 45:25} years old ${type1}`;
+
+//method .charAt() example
+const biography = 'William Shakespeare was an English playwright, poet and actor.';
+const index = 18;
+const char = biography.charAt(index);
+
+//method .includes() example
+const sculptureTerm = 'Sculpture is the branch of the visual arts that operates in three dimensions.';
+const word = 'dimensions';
+const hasWord = sculptureTerm.includes(word);
+console.log(`The word "${word}" ${hasWord ? 'is' : 'is not'} in the term`);
+
+//method .indexOf() example
+const capitalMadrid = 'Capital city Madrid is home to the Royal Palace and Prado museum.';
+console.log(capitalMadrid.indexOf('Madrid'));
+console.log(capitalMadrid.indexOf('house'));
+
+//method .toLowerCase() example
+const javaScrpt = 'JavaScript IS HIGH-LEVEL, OFTEN JUST-IN-TIME compiled and multi-paradigm.';
+const normJavaScrpt = javaScrpt.toLowerCase()
+console.log (normJavaScrpt);
+
+//method .toUpperCase() example
+const parach = 'A parachute is usually made of a light, strong fabric.';
+const newParach = parach.toUpperCase();
+console.log(newParach);
+
+//method .slice() example
+const infoNY = 'New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean.';
+console.log(infoNY.slice(35));
+console.log(infoNY.slice(0, 13));
+console.log(infoNY.slice(-25));
+console.log(infoNY.slice(-42, -25));
+
+//method .split() example
+const strLA = 'Los Angeles is a sprawling Southern California city and the center of the nation’s film and television industry.';
+const arrLA = strLA.split(' ');
+console.log(arrLA);
