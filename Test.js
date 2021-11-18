@@ -720,3 +720,19 @@ console.log(infoNY.slice(-42, -25));
 const strLA = 'Los Angeles is a sprawling Southern California city and the center of the nation’s film and television industry.';
 const arrLA = strLA.split(' ');
 console.log(arrLA);
+
+//method .match() example
+const infoArthur = 'King Arthur was a legendary British leader who, according to medieval histories and romances.';
+const regex1 = /[A-Z]/g;
+const matches = infoArthur.match(regex1);
+console.log(matches);
+
+//method .replace() example
+const bicycle = 'A bicycle rider is called a cyclist, or bicyclist.';
+console.log(bicycle.replace('bicycle', 'bike'));
+const regex2 = /called/g;
+console.log(bicycle.replace(regex2, 'named'));
+
+//method .trim() example	
+const programDesc = '   Write a JavaScript program to count the number of vowels in a given string.   '; 
+console.log(programDesc.trim());
