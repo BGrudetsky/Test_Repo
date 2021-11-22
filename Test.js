@@ -736,3 +736,227 @@ console.log(bicycle.replace(regex2, 'named'));
 //method .trim() example	
 const programDesc = '   Write a JavaScript program to count the number of vowels in a given string.   '; 
 console.log(programDesc.trim());
+
+//-------------------------------------------------------------------
+//Ninth presentation (OOP)
+//-------------------------------------------------------------------
+//inheritance example
+function Car(model, brand, color, yearBuild) {
+  this.model = model;
+  this.brand = brand;
+  this.color = color;
+  this.yearBuild = yearBuild;
+  this.getBrand = () => this.brand;
+  this.klaxon = () => console.log('Tulula....');
+}
+const Audi = new Car('A8', 'Audi', 'black', '2015');
+const Mazda = new Car('RX-8', 'Mazda', 'silver', '2018');
+console.log(Audi.model);
+console.log(Mazda.yearBuild);
+
+//polymorphism example
+class Animal {
+  constructor(name, breed, color) {
+      this.name = name;
+      this.breed = breed;
+      this.color = color;
+  }
+  sound() { return ''; }
+}
+class Dog extends Animal {
+  constructor(name, breed, color) {
+    super(name, breed, color);
+  }
+  sound() {
+      return 'Woof!';
+  }
+  wantToWalk () {
+      return 'Woof! Woof! Woof!';
+  }
+}
+class Cat extends Animal {
+  constructor(name, breed, color) {
+      super(name, breed, color);
+  }
+  sound() {
+      return 'Meow!';
+  }
+  wantToWalk () {
+      return 'Runs away ...';
+  }
+}
+class Cow extends Animal {
+  constructor(name, breed, color) {
+      super(name, breed, color);
+  }
+  sound() {
+      return 'Moo!';
+  }
+  wantToWalk () {
+      return 'Yes ...';
+  }
+}
+class Horse extends Animal {
+  constructor(name, breed, color) {
+      super(name, breed, color);
+  }
+  sound() {
+      return 'Phrr!';
+  }
+  wantToWalk () {
+      return 'Want to fast run ...';
+  }
+}
+const Bethoven = new Dog('Bethoven', 'hairy', 'brown');
+Bethoven.sound(); 
+const Jack = new Cat('Jack', 'nice', 'silver');
+console.log(Jack.name); 
+const Cowie = new Cow('Cowie', 'milky', 'white')
+console.log(Cowie.sound());
+const Horsie = new Horse('Horsie', 'running', 'black')
+console.log(Horsie.color);
+
+//fn-constructor example
+function Fish(name, color, size) {
+  this.name = name;
+  this.color = color;
+  this.size = size;
+ 
+  this.move = function () {
+    return "I’m swimming";
+  };
+  this.sound = function () {
+    return "Bulb! Bulb!";
+  };
+} 
+const Jenni = new Fish('Jenni', 'silver', 'small');
+const Goopie = new Fish('Goopie', 'flame', 'medium');
+console.log(Jenni.sound());
+console.log(Goopie.move());
+
+//classes example
+class Fish1 {
+  constructor(name, color, size) {
+      this.name = name;
+      this.color = color;
+      this.size = size;
+  }
+  swim() {
+      console.log(this.name +  " is swimming");
+  }
+  sound() {
+      console.log("Bulb! Bulb!");
+  }
+}
+class fishForEating extends Fish1 {
+constructor(name, color, size, weight) {
+  super(name, color, size, weight)
+  this.weight = weight;
+}
+swim() {
+  console.log(this.name + ' is too lazy to swim');
+}
+}
+const Carp = new fishForEating("Carp", "grey", 'medium', 'up to 1 kg');
+const Goopie2 = new Fish1("Goopie", "rainbow", 'small');
+console.log(Goopie2.size);
+console.log(Carp.weight);
+console.log(Carp.size);
+console.log(Carp.swim());
+
+//fn constructor + prototype example
+function Dogs(name, color) {
+  this.name = name;
+  this.color = color;
+}
+Dogs.prototype.play = function () {
+    console.log("Woof! Let's go to play");
+};
+Dogs.prototype.sound = function () {
+    console.log("Woof! Woof!");
+};
+const secondBethoven = new Dogs("Bethoven", "brown");
+const secondBarsik = new Dogs("Barsik", "black");
+secondBarsik.play();
+secondBethoven.sound();
+
+//using 'this' example
+const student = {
+  name: "Sergiy",
+  age: 20,
+  sayHi() {
+    console.log(`Hi. My name is ${this.name} and I am ${this.age}`);
+  }
+};
+student.sayHi(); 
+
+//using 'this' with arrow function example
+const arrowFn1 = () => {
+  console.log(this);
+}
+function summ123() {
+  this.operand = 5;
+  this.rightOperand = 10;
+  this.summary = () => {
+    return console.log(this.operand * this.rightOperand);
+  }
+ }
+const newSumm123 = new summ123();
+newSumm123.summary();
+
+//area of visibility functions and variables
+const newConst = 100;
+console.log();                      //insert rightOperand2 and get error - is not defined
+function operand() {
+  const rightOperand2 = 100;
+  
+  return console.log(newConst + rightOperand2);
+}
+operand();
+
+//area of visibility loops 
+let first1 = 0;
+console.log();                      //insert 'i' and get error - is not defined
+for (let i = 0; i < 5; i++) {
+  first1 += i;
+}
+console.log();                      //insert 'i' and ger error - is not defined
+
+//area of visibility methods and variables
+const arrie = [10, 20, 30, 40];
+let res = 0;
+console.log();                      //insert 'varie' and get error - is mot defined
+arrie.forEach(varie => {
+  res += varie;
+})
+console.log();                       
+
+//method .bind() example
+const examp = {
+  z: 35,
+  getZ: function() {
+    return this.z;
+  }
+};
+const newGetZ = examp.getZ;
+console.log();                    //insert 'newGetZ()' and get error - is mot defined
+const newestGetZ = newGetZ.bind(examp);
+console.log(newestGetZ());
+
+//method .apply() example
+const arrOfVariabl = [4, 2, 5, 1, 9];
+const maxValue = Math.max.apply(undefined, arrOfVariabl);
+console.log(maxValue);
+const minValue = Math.min.apply(undefined, arrOfVariabl);
+console.log(minValue);
+
+//method .call() example	
+function Products(name, price) {
+  this.name = name;
+  this.price = price;
+}
+function inBasket(name, price) {
+  Products.call(this, name, price);
+  this.category = 'food';
+}
+console.log(new inBasket('lemon', 2).name);
